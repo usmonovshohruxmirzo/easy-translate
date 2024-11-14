@@ -1,5 +1,5 @@
 import pytest
-from easy_translate import EasyTranslate
+from simple_translate import EasyTranslate
 
 translator = EasyTranslate()
 
