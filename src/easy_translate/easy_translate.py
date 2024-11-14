@@ -1,6 +1,6 @@
 from typing import Optional
 import requests
-from supported_languages import SUPPORTED_LANGUAGES
+from .supported_languages import SUPPORTED_LANGUAGES
 
 class EasyTranslate:
     def __init__(self):
