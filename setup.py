@@ -11,7 +11,7 @@ setup(
     description='Multi language easy_translate',
     long_description=open("README.md").read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/webbro-software/multi-language-translator',
+    url='https://github.com/usmonovshohruxmirzo/easy-translate',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
