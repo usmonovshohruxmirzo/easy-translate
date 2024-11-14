@@ -2,8 +2,8 @@ from typing import Optional
 import requests
 
 class EasyTranslate:
-    def __init__(self, lingva_url: str = "https://lingva.ml"):
-        self.lingva_url = lingva_url
+    def __init__(self):
+        self.lingva_url: str = "https://lingva.ml"
 
     def lingva_translate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
         url = f"{self.lingva_url}/api/v1/{source_language}/{target_language}/{text}"
