@@ -18,3 +18,11 @@ def test_translation_en_to_fr():
 def test_translation_en_to_kr():
     translated_text = translator.translate("apple", "ko", "en")
     assert translated_text == "사과"
+
+def test_supported_languages():
+    languages = translator.get_supported_languages()
+    assert languages == languages
+
+def test_supported_languages_uz():
+    languages = translator.get_supported_languages()
+    assert "uz" in languages, "Uzbek (uz) is not in the list of supported languages"
