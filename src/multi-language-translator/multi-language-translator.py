@@ -1,23 +1,22 @@
-from typing import Optional, Dict
+from typing import Optional
 import requests
 
 class MultiLanguageTranslator:
-    def __init__(self, libretranslate_url: str = "https://libretranslate.com"):
-        self.libretranslate_url = libretranslate_url
+    def __init__(self, lingva_url: str = "https://lingva.ml"):
+        self.lingva_url = lingva_url
 
-    def libretranslate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
-        url: str = f"{self.libretranslate_url}/translate"
-        params: Dict[str, str] ={
-            "q": text,
-            "source": source_language,
-            "target": target_language,
-            "format": "text"
-        }
+    def lingva_translate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
+        url = f"{self.lingva_url}/api/v1/{source_language}/{target_language}/{text}"
 
-        response = requests.post(url, json=params)
-        response_data = response.json()
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            response_data = response.json()
 
-    @staticmethod
+            return response_data.get("translation", "")
+        except requests.RequestException as error:
+            print(f"Request failed {error}")
+            return ""
+
     def translate(self, text: str, target_language: str, source_language: Optional[str] = "en") -> str:
-        result: str = ""
-        return result
+        return self.lingva_translate(text, target_language, source_language)
