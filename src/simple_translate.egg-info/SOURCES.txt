@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/simple_translate/__init__.py
+src/simple_translate/simple_translate.py
+src/simple_translate/supported_languages.py
+src/simple_translate.egg-info/PKG-INFO
+src/simple_translate.egg-info/SOURCES.txt
+src/simple_translate.egg-info/dependency_links.txt
+src/simple_translate.egg-info/top_level.txt
+test/test.py

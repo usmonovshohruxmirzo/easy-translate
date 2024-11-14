@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='simple_translate',
-    version='0.1.3',
+    version='0.1.4',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[],
     author='Usmonov Shoxruxmirzo',
     author_email='usmonovshohruxmirzo@gmail.com',
     description='Multi language translator',
-    long_description=open('README.md', encoding='utf-8').read(),
+    long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/usmonovshohruxmirzo/easy-translate',
     classifiers=[
