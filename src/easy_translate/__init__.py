@@ -1,3 +1,3 @@
-from .translator import MultiLanguageTranslator
+from .easy_translate import EasyTranslate
 
-__all__ = ['MultiLanguageTranslator']
+__all__ = ['EasyTranslate']

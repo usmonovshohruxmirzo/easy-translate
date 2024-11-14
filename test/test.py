@@ -1,7 +1,7 @@
 import pytest
-from translator import MultiLanguageTranslator
+from easy_translate import EasyTranslate
 
-translator = MultiLanguageTranslator()
+translator = EasyTranslate()
 
 def test_translation_uz_to_en():
     translated_text = translator.translate("salom", "en", "uz")

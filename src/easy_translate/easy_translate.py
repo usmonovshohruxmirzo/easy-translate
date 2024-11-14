@@ -1,7 +1,7 @@
 from typing import Optional
 import requests
 
-class MultiLanguageTranslator:
+class EasyTranslate:
     def __init__(self, lingva_url: str = "https://lingva.ml"):
         self.lingva_url = lingva_url
 

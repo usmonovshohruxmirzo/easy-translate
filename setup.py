@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='translator',
+    name='easy_translate',
     version='0.0.1',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[],
     author='Usmonov Shoxruxmirzo',
     author_email='usmonovshohruxmirzo@gmail.com',
-    description='Multi language translator',
+    description='Multi language easy_translate',
     long_description=open("README.md").read(),
     long_description_content_type='text/markdown',
     url='https://github.com/webbro-software/multi-language-translator',
