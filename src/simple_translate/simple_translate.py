@@ -14,7 +14,7 @@ class SimpleTranslate:
         return SUPPORTED_LANGUAGES
 
     def __lingva_translate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
-        url = f"{self.__lingva_url}/api/v1/{target_language}/{source_language}/{text}"
+        url: str = f"{self.__lingva_url}/api/v1/{target_language}/{source_language}/{text}"
 
         try:
             response = requests.get(url)
