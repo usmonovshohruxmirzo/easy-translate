@@ -2,7 +2,7 @@ from typing import Optional
 import requests
 from .supported_languages import SUPPORTED_LANGUAGES
 
-class EasyTranslate:
+class SimpleTranslate:
     def __init__(self):
         self.lingva_url: str = "https://lingva.ml"
 

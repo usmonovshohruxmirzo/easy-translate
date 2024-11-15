@@ -1,3 +1,3 @@
-from .simple_translate import EasyTranslate
+from .simple_translate import SimpleTranslate
 
-__all__ = ['EasyTranslate']
+__all__ = ['SimpleTranslate']
