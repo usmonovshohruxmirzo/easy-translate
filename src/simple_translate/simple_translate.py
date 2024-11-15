@@ -1,17 +1,20 @@
 from typing import Optional
 import requests
-from .supported_languages import SUPPORTED_LANGUAGES
+try:
+    from .supported_languages import SUPPORTED_LANGUAGES
+except ImportError:
+    from supported_languages import SUPPORTED_LANGUAGES
 
 class SimpleTranslate:
     def __init__(self):
-        self.lingva_url: str = "https://lingva.ml"
+        self.__lingva_url: str = "https://lingva.ml"
 
     @staticmethod
     def get_supported_languages():
         return SUPPORTED_LANGUAGES
 
-    def lingva_translate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
-        url = f"{self.lingva_url}/api/v1/{source_language}/{target_language}/{text}"
+    def __lingva_translate(self, text: str, target_language: str, source_language: Optional[str] = "en"):
+        url = f"{self.__lingva_url}/api/v1/{target_language}/{source_language}/{text}"
 
         try:
             response = requests.get(url)
@@ -24,4 +27,4 @@ class SimpleTranslate:
             return ""
 
     def translate(self, text: str, target_language: str, source_language: Optional[str] = "en") -> str:
-        return self.lingva_translate(text, target_language, source_language)
+        return self.__lingva_translate(text, target_language, source_language)
